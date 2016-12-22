@@ -1,0 +1,35 @@
+body{
+    padding: 20px;
+}
+
+.panel-look(@color, @font-color:#fff){
+    border-color: @color;
+
+    .panel-heading{
+        background: @color;
+        border-color: @color;
+        color: @font-color;
+    }
+}
+
+.panel-success {
+    .panel-look(#5cb85c)
+}
+
+.panel-primary {
+    .panel-look(#337ab7)
+}
+
+.panel-warning {
+    // Create Variables
+    @color: #f0ad4e;
+    @font-color: #fff;
+    .panel-look(#f0ad4e)
+}
+
+.panel-danger {
+    // Create Variables
+    @color: #d9534f;
+    @font-color: #fff;
+    .panel-look(#d9534f)
+}

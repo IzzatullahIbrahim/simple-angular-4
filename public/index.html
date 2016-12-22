@@ -8,11 +8,27 @@
 
     <!-- LOad Styling-->
     <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <!-- <link href="/css/style.css" rel="stylesheet" type="text/css"> -->
+    <link href="/css/style.less" rel="stylesheet" type="text/less">
 
     <!-- Load Script-->
     <script src="/lib/jquery/dist/jquery.js"></script>
     <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!-- set options before less.js script -->
+    <script>
+    less = {
+        env: "development",
+        async: false,
+        fileAsync: false,
+        poll: 1000,
+        functions: {},
+        dumpLineNumbers: "comments",
+        relativeUrls: false,
+        rootpath: ":/a.com/"
+    };
+    </script>
+    <script src="/lib/less/dist/less.js"></script>
 </head>
 <body ng-app="MyApp">
     <nav class="navbar navbar-inverse">
