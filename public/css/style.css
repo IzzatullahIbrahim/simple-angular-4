@@ -1,0 +1,47 @@
+body{
+    padding: 20px;
+}*/
+
+.panel .panel-heading h3 {
+    margin:0;
+}
+
+.panel-success {
+    border-color: #5cb85c;
+}
+
+.panel-success .panel-heading{
+    background: #5cb85c;
+    border-color: #5cb85c;
+    color: white;
+}
+
+.panel-primary {
+    border-color: #337ab7;
+}
+
+.panel-primary .panel-heading{
+    background: #337ab7;
+    border-color: #337ab7;
+    color: white;
+}
+
+.panel-warning {
+    border-color: #f0ad4e;
+}
+
+.panel-warning .panel-heading {
+    background: #f0ad4e;
+    border-color: #f0ad4e;
+    color: white;
+}
+
+.panel-danger {
+    border-color: #d9534f;
+}
+
+.panel-danger .panel-heading {
+    background: #d9534f;
+    border-color: #d9534f;
+    color: white;
+}

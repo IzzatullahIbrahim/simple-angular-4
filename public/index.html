@@ -8,6 +8,7 @@
 
     <!-- LOad Styling-->
     <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
 
     <!-- Load Script-->
     <script src="/lib/jquery/dist/jquery.js"></script>
@@ -28,8 +29,12 @@
         </div>
     </nav>
 
-    <!-- This is where the angular html will be injected -->
-    <div ui-view></div>
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <!-- This is where the angular html will be injected -->
+            <div ui-view></div>
+        </div>
+    </div>
 
     <script src="/lib/angular/angular.js"></script>
     <script src="/lib/angular-ui-router/release/angular-ui-router.js"></script>

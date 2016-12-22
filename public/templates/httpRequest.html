@@ -1,51 +1,120 @@
-<h1>NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</h1>
-<h3>Create form</h3>
+<!-- Panel template
+<div class="panel panel-default">
+<div class="panel-body">A Basic Panel</div>
+</div>
+-->
 
-<form ng-submit="create ()">
-    <div>
-        <label>Title:</label>
-        <input ng-model="post.title">
-    </div>
-    <div>
-        <label>Author:</label>
-        <input ng-model="post.author">
-    </div>
-    <button>Create Post</button>
-</form>
+<h3>HTTP Request</h3>
 
-<h3>Read All Posts</h3>
-<button ng-click="readAll ()">Read Posts</button>
+<div class="panel panel-success">
+    <div class="panel-heading">
+        Create Post
+    </div>
 
-<ul>
-    <li ng-repeat="item in postList">
-        <strong>id:</strong> {{ item.id}} <br>
-        <strong>Name:</strong> {{ item.title}} <br>
-        <strong>Author:</strong> {{ item.author}} <br>
-    </li>
-</ul>
+    <div class="panel-body">
+        <form ng-submit="create ()" class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2">Title: </label>
+                <div class="col-sm-10">
+                    <input class="form-control" ng-model="post.title">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Author: </label>
+                <div class="col-sm-10">
+                    <input class="form-control" ng-model="post.author">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2"></label>
+                <div class="col-sm-10">
+                    <button class="btn btn-success">Create Post</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
-<h3>Update Posts</h3>
-<form ng-submit="updatePost ()">
-    <div>
-        <label>id:</label>
-        <input ng-model="post.id">
-    </div>
-    <div>
-        <label>Title:</label>
-        <input ng-model="post.title">
-    </div>
-    <div>
-        <label>Author:</label>
-        <input ng-model="post.author">
-    </div>
-    <button>Update Post</button>
-</form>
 
-<h3>Delete Posts</h3>
-<form ng-submit="deletePost ()">
-    <div>
-        <label>id:</label>
-        <input ng-model="post.id">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Read Post
     </div>
-    <button>Delete Post</button>
-</form>
+
+    <div class="panel-body">
+        <div class="form-group">
+            <label class="control-label col-sm-2"></label>
+            <div class="col-sm-10">
+                <button class="btn btn-primary" ng-click="readAll ()">Read Posts</button>
+            </div>
+        </div>
+
+        <ul>
+            <li ng-repeat="item in postList">
+                <strong>id:</strong> {{ item.id}} <br>
+                <strong>Name:</strong> {{ item.title}} <br>
+                <strong>Author:</strong> {{ item.author}} <br>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="panel panel-warning">
+    <div class="panel-heading">
+        Update Post
+    </div>
+
+    <div class="panel-body">
+        <form ng-submit="updatePost ()" class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2">id: </label>
+                <div class="col-sm-10">
+                    <input class="form-control" ng-model="post.id">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Title: </label>
+                <div class="col-sm-10">
+                    <input class="form-control" ng-model="post.title">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Author: </label>
+                <div class="col-sm-10">
+                    <input class="form-control" ng-model="post.author">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2"></label>
+                <div class="col-sm-10">
+                    <button class="btn btn-warning">Update Post</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        Delete Post
+    </div>
+
+    <div class="panel-body">
+        <form ng-submit="deletePost ()" class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2">id: </label>
+                <div class="col-sm-10">
+                    <input class="form-control" ng-model="post.id">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2"></label>
+                <div class="col-sm-10">
+                    <button class="btn btn-danger">Delete Post</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
