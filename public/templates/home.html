@@ -1,0 +1,20 @@
+<h2>Home Page</h2>
+
+<div>
+    <strong>Name: </strong> {{ name }} <br>
+    <input ng-model = "name">
+</div>
+<div>
+    <strong>Age: </strong> {{ age }} <br>
+    <input ng-model = "age">
+</div>
+
+<button ng-click="increaseAge ()">Increase Age</button>
+
+<ul>
+    <li ng-repeat="name in nameList">
+        {{ name }}
+    </li>
+</ul>
+
+<p>boom baby burn</p>
