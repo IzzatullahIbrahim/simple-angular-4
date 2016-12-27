@@ -61,20 +61,24 @@ app.controller ('MyApp.HttpRequestController',[
 
         $scope.create = function () {
             console.log('Trying to create a post: ', $scope.post);
+            console.log ('Form state: ', $scope.createPost.$valid);
 
-            $http({
-                url:'http://localhost:3000/posts',
+            // Make a call only if valid
+            if ($scope.createPost.$valid){
+                $http({
+                    url:'http://localhost:3000/posts',
 
-                // use the 'POST' method because we want to post/create data on the server
-                method : 'POST',
-                data: $scope.post
-            })
-            .success (function(response){
-                console.log('This is the response: ',response)
-            })
-            .error (function(response){
-                console.log('This is the error: ',response)
-            })
+                    // use the 'POST' method because we want to post/create data on the server
+                    method : 'POST',
+                    data: $scope.post
+                })
+                .success (function(response){
+                    console.log('This is the response: ',response)
+                })
+                .error (function(response){
+                    console.log('This is the error: ',response)
+                })
+            }
         }
 
         $scope.readAll = function (){

@@ -12,17 +12,18 @@
     </div>
 
     <div class="panel-body">
-        <form ng-submit="create ()" class="form-horizontal">
+        <form name="createPost" ng-submit="create ()" class="form-horizontal" novalidate>
             <div class="form-group">
-                <label class="control-label col-sm-2">Title: </label>
+                <label class="control-label col-sm-2"></label>
                 <div class="col-sm-10">
-                    <input class="form-control" ng-model="post.title">
+                    <p class="alert alert-danger" ng-show="createPost.title.$invalid">Please enter a full title</p>
+                    <input name="title" class="form-control" ng-model="post.title" ng-minlength="5">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2">Author: </label>
                 <div class="col-sm-10">
-                    <input class="form-control" ng-model="post.author">
+                    <input class="form-control" ng-model="post.author" >
                 </div>
             </div>
             <div class="form-group">
